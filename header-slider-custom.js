@@ -38,7 +38,9 @@ $(document).ready(function() {
             timers.slickNext = null;
           }
           timers.slickNext = setTimeout(function () {
-            slideWrapper.slick('slickNext');
+            if (slideWrapper.hasClass('slick-initialized') && typeof slideWrapper.slick === 'function') {
+              slideWrapper.slick('slickNext');
+            }
           }, 7000);
           break;
         case 'pause':
@@ -50,7 +52,8 @@ $(document).ready(function() {
 
   // Slickが初期化されるまで待機
   function initHeaderSliderEvents() {
-    if (!slideWrapper.hasClass('slick-initialized')) {
+    // slickメソッドが利用可能かチェック
+    if (!slideWrapper.hasClass('slick-initialized') || typeof slideWrapper.slick !== 'function') {
       setTimeout(initHeaderSliderEvents, 100);
       return;
     }
@@ -69,7 +72,9 @@ $(document).ready(function() {
     });
 
     slideWrapper.on('swipe', function (event, slick, direction) {
-      slideWrapper.slick('setPosition');
+      if (slideWrapper.hasClass('slick-initialized') && typeof slideWrapper.slick === 'function') {
+        slideWrapper.slick('setPosition');
+      }
     });
 
     // initialize / first animate
