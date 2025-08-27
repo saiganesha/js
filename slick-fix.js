@@ -184,19 +184,21 @@
       ],
     });
     
-    // header_sliderの特殊な初期化
+    // header_sliderの特殊な初期化（カスタムオプションを使用）
     if (jQuery('#header_slider').length && !jQuery('#header_slider').hasClass('slick-initialized')) {
-      window.initializeSlick('#header_slider', {
+      // header-slider-custom.jsで定義されたオプションを使用
+      var options = window.headerSliderOptions || {
         lazyLoad: 'ondemand',
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 7000,
         arrows: false,
         dots: false,
         infinite: true,
         fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-      });
+      };
+      window.initializeSlick('#header_slider', options);
     }
   };
   
