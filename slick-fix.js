@@ -188,17 +188,81 @@
     if (jQuery('#header_slider').length && !jQuery('#header_slider').hasClass('slick-initialized')) {
       // header-slider-custom.jsで定義されたオプションを使用
       var options = window.headerSliderOptions || {
-        lazyLoad: 'ondemand',
-        autoplay: true,
-        autoplaySpeed: 7000,
-        arrows: false,
-        dots: false,
+        slide: '.item',
         infinite: true,
-        fade: true,
+        dots: true,
+        arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        swipe: true,
+        touchMove: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        autoplay: true,
+        fade: true,
+        autoplaySpeed: 7000,
+        speed: 1500,
+        easing: 'easeOutExpo',
+        touchThreshold: 8,
+        swipeToSlide: true,
+        waitForAnimate: false,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              fade: false,
+              speed: 300,
+              swipe: true,
+              touchMove: true,
+              dots: true,
+            },
+          },
+        ],
       };
       window.initializeSlick('#header_slider', options);
+    }
+    
+    // product.html のスライダー（商品画像とサムネイル）
+    window.initializeSlick('.js-images-slider', {
+      autoplay: false,
+      arrows: true,
+      fade: true,
+      infinite: true,
+      asNavFor: '.p-product-thumb-list',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false
+          }
+        }
+      ]
+    });
+    
+    window.initializeSlick('.p-product-thumb-list', {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.js-images-slider',
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
+    });
+    
+    // 商品ページのbeforeChangeイベントハンドラー
+    if (jQuery('.js-images-slider').length && jQuery('.p-product-thumb-list').length) {
+      jQuery('.js-images-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        var $thumbnailItem = jQuery('.p-product-thumb-list__item');
+        $thumbnailItem.removeClass("is-current");
+        $thumbnailItem.eq(nextSlide).addClass("is-current");
+      });
+      
+      jQuery('.p-product-thumb-list').show();
     }
   };
   
