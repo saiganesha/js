@@ -10,16 +10,17 @@
     delayAfterTrigger: 3000, // 3 seconds
 
     // Campaign end date
-    endDate: new Date('2025-09-15T23:59:59'),
+    endDate: new Date('2025-09-18T18:00:00'),
 
     // Banner images (random selection)
     images: [
-      'https://img02.shop-pro.jp/PA01008/381/etc_base64/MjAyNV9jb3Vwb24x.jpeg?cmsp_timestamp=20250913115913',
-      'https://img02.shop-pro.jp/PA01008/381/etc_base64/MjAyNV9jb3Vwb24y.jpeg?cmsp_timestamp=20250913115913',
+      'https://img02.shop-pro.jp/PA01008/381/etc_base64/MjAyNW1haGFsYXlhMQ.jpeg?cmsp_timestamp=20250917202653',
+      'https://img02.shop-pro.jp/PA01008/381/etc_base64/MjAyNW1haGFsYXlhMg.jpeg?cmsp_timestamp=20250917202653',
+      'https://img02.shop-pro.jp/PA01008/381/etc_base64/MjAyNW1haGFsYXlhMw.jpeg?cmsp_timestamp=20250917202653',
     ],
 
     // Banner link
-    linkUrl: 'https://sitarama.jp/?mode=f390',
+    linkUrl: 'https://sitarama.jp/?pid=121796545',
 
     // Session storage key
     sessionKey: 'bannerModalShown',
