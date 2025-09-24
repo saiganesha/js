@@ -60,6 +60,7 @@ $(document).ready(function() {
     touchThreshold: 8,
     swipeToSlide: true,
     waitForAnimate: false,
+    adaptiveHeight: false,
     responsive: [
       {
         breakpoint: 768,
@@ -71,6 +72,7 @@ $(document).ready(function() {
           swipe: true,
           touchMove: true,
           dots: true,
+          adaptiveHeight: false,
         },
       },
     ],
