@@ -52,8 +52,8 @@ $(document).ready(function() {
     pauseOnHover: false,
     autoplay: false,
     fade: false,
-    centerMode: false,
-    centerPadding: '0',
+    centerMode: true,
+    centerPadding: '18%',
     autoplaySpeed: 7000,
     speed: 500,
     easing: 'ease',
@@ -62,6 +62,19 @@ $(document).ready(function() {
     waitForAnimate: false,
     adaptiveHeight: false,
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerMode: false,
+          centerPadding: '0',
+          fade: false,
+          speed: 400,
+          swipe: true,
+          touchMove: true,
+          dots: true,
+          adaptiveHeight: false,
+        },
+      },
       {
         breakpoint: 768,
         settings: {
