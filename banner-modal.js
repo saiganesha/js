@@ -10,18 +10,19 @@
     delayAfterTrigger: 3000, // 3 seconds
 
     // Campaign end date
-    endDate: new Date('2025-09-30T23:59:59'),
+    endDate: new Date('2025-10-05T23:59:59'),
 
     // Banner images (random selection)
     images: [
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1758449171/banner-images/Sora_Task_Image_0.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1758449172/banner-images/Sora_Task_Image_1_%281%29.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1758449175/banner-images/Sora_Task_Image_1.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1758449176/banner-images/Sora_Task_Image_3.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375298/banner-images/dussehra1.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375302/banner-images/dussehra2.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375305/banner-images/dussehra3.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375309/banner-images/dussehra4.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375311/banner-images/dussehra5.webp'
     ],
 
     // Banner link
-    linkUrl: 'https://sitarama.jp/?mode=f150',
+    linkUrl: 'https://sitarama.jp/?mode=f197',
 
     // Session storage key
     sessionKey: 'bannerModalShown',
