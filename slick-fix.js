@@ -183,45 +183,7 @@
         },
       ],
     });
-    
-    // header_sliderの特殊な初期化（カスタムオプションを使用）
-    if (jQuery('#header_slider').length && !jQuery('#header_slider').hasClass('slick-initialized')) {
-      // header-slider-custom.jsで定義されたオプションを使用
-      var options = window.headerSliderOptions || {
-        slide: '.item',
-        infinite: true,
-        dots: true,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        swipe: true,
-        touchMove: true,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        autoplay: true,
-        fade: true,
-        autoplaySpeed: 7000,
-        speed: 1500,
-        easing: 'easeOutExpo',
-        touchThreshold: 8,
-        swipeToSlide: true,
-        waitForAnimate: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              fade: false,
-              speed: 300,
-              swipe: true,
-              touchMove: true,
-              dots: true,
-            },
-          },
-        ],
-      };
-      window.initializeSlick('#header_slider', options);
-    }
-    
+
     // product.html のスライダー（商品画像とサムネイル）
     window.initializeSlick('.js-images-slider', {
       autoplay: false,
@@ -256,7 +218,7 @@
     
     // 商品ページのbeforeChangeイベントハンドラー
     if (jQuery('.js-images-slider').length && jQuery('.p-product-thumb-list').length) {
-      jQuery('.js-images-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      jQuery('.js-images-slider').on('beforeChange', function(_event, _slick, _currentSlide, nextSlide) {
         var $thumbnailItem = jQuery('.p-product-thumb-list__item');
         $thumbnailItem.removeClass("is-current");
         $thumbnailItem.eq(nextSlide).addClass("is-current");
