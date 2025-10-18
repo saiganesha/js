@@ -10,19 +10,21 @@
     delayAfterTrigger: 3000, // 3 seconds
 
     // Campaign end date
-    endDate: new Date('2025-10-05T23:59:59'),
+    endDate: new Date('2025-10-23T23:59:59'),
 
     // Banner images (random selection)
     images: [
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375298/banner-images/dussehra1.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375302/banner-images/dussehra2.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375305/banner-images/dussehra3.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375309/banner-images/dussehra4.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1759375311/banner-images/dussehra5.webp'
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765456/banner-images/diwali1.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765459/banner-images/diwali2.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765460/banner-images/diwali3.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765460/banner-images/diwali4.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765462/banner-images/diwali5.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765463/banner-images/diwali6.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765463/banner-images/diwali7.webp'
     ],
 
     // Banner link
-    linkUrl: 'https://sitarama.jp/?mode=f197',
+    linkUrl: 'https://sitarama.jp/?mode=f151',
 
     // Session storage key
     sessionKey: 'bannerModalShown',
