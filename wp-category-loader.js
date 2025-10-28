@@ -125,12 +125,8 @@
           link.className = 'l-side-navi-list__link is-link';
           link.href = `${CATEGORY_PAGE_URL}&category_id=${category.id}`;
 
-          // 再計算した記事数を使用（取得できない場合は元の値）
-          const count = totalCountsMap && totalCountsMap.has(category.id)
-            ? totalCountsMap.get(category.id)
-            : category.count;
-
-          link.textContent = `${category.name} (${count})`;
+          // サイドバーでは記事数を非表示
+          link.textContent = category.name;
           li.appendChild(link);
           sideCategoryList.appendChild(li);
         });
