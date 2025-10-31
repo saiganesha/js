@@ -10,21 +10,19 @@
     delayAfterTrigger: 3000, // 3 seconds
 
     // Campaign end date
-    endDate: new Date('2025-10-23T23:59:59'),
+    endDate: new Date('2025-11-03T23:59:59'),
 
     // Banner images (random selection)
     images: [
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765456/banner-images/diwali1.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765459/banner-images/diwali2.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765460/banner-images/diwali3.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765460/banner-images/diwali4.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765462/banner-images/diwali5.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765463/banner-images/diwali6.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1760765463/banner-images/diwali7.webp'
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1761904205/banner-images/Akshaya_Navami_1.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1761904208/banner-images/Akshaya_Navami_2.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1761904211/banner-images/Akshaya_Navami_3.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1761904215/banner-images/Akshaya_Navami_4.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1761904218/banner-images/Akshaya_Navami_5.webp',
     ],
 
     // Banner link
-    linkUrl: 'https://sitarama.jp/?mode=f151',
+    linkUrl: 'https://sitarama.jp/?mode=f390',
 
     // Session storage key
     sessionKey: 'bannerModalShown',
