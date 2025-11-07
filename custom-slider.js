@@ -4,8 +4,13 @@ class CustomSlider {
     this.container = container;
     this.slider = container.querySelector('.slider');
     this.slides = Array.from(this.slider.querySelectorAll('.slide'));
+    this.originalSlides = this.slides.slice();
+    this.totalSlides = this.originalSlides.length;
     this.currentIndex = 0;
+    this.desktopPositionIndex = 1;
     this.isDesktop = window.innerWidth >= 1024;
+    this.isInfiniteReady = false;
+    this.boundHandleTransitionEnd = this.handleTransitionEnd.bind(this);
 
     // オプション
     this.options = {
@@ -33,7 +38,7 @@ class CustomSlider {
 
   init() {
     // スライドが1枚以下の場合は何もしない
-    if (this.slides.length <= 1) {
+    if (this.totalSlides <= 1) {
       return;
     }
 
@@ -59,7 +64,7 @@ class CustomSlider {
 
   optimizeFirstSlideImage() {
     // 1枚目のスライドの画像のloading属性を削除
-    const firstSlide = this.slides[0];
+    const firstSlide = this.originalSlides[0];
     if (firstSlide) {
       const firstImage = firstSlide.querySelector('img');
       if (firstImage && firstImage.hasAttribute('loading')) {
@@ -72,7 +77,7 @@ class CustomSlider {
     const pager = document.createElement('div');
     pager.className = 'custom-slider-pager';
 
-    this.slides.forEach((_, index) => {
+    for (let index = 0; index < this.totalSlides; index += 1) {
       const dot = document.createElement('button');
       dot.className = 'pager-dot';
       dot.setAttribute('aria-label', `スライド ${index + 1} へ移動`);
@@ -83,7 +88,7 @@ class CustomSlider {
       });
 
       pager.appendChild(dot);
-    });
+    }
 
     this.container.appendChild(pager);
     this.pager = pager;
@@ -99,6 +104,7 @@ class CustomSlider {
   }
 
   updateSlider() {
+    this.prepareSliderStructure();
     if (this.isDesktop) {
       this.updateDesktopSlider();
     } else {
@@ -107,14 +113,24 @@ class CustomSlider {
     this.updatePager();
   }
 
+  prepareSliderStructure() {
+    if (this.isDesktop) {
+      this.ensureDesktopStructure();
+    } else {
+      this.teardownDesktopStructure();
+    }
+  }
+
   updateDesktopSlider() {
-    const slideWidth = this.slider.offsetWidth;
-    const offset = -this.currentIndex * slideWidth;
-    this.slider.style.transform = `translateX(${offset}px)`;
-    this.slider.style.transition = `transform ${this.options.speed}ms ease`;
+    if (!this.slides.length) return;
+    this.applyDesktopTransform(false);
   }
 
   updateMobileSlider() {
+    // sliderのtransformをリセット（デスクトップからの切り替え時の対応）
+    this.slider.style.transform = 'translateX(0)';
+    this.slider.style.transition = 'none';
+
     this.slides.forEach((slide, index) => {
       slide.style.opacity = index === this.currentIndex ? '1' : '0';
       slide.style.zIndex = index === this.currentIndex ? '1' : '0';
@@ -123,12 +139,17 @@ class CustomSlider {
   }
 
   goToSlide(index) {
-    if (index < 0) {
-      this.currentIndex = this.slides.length - 1;
-    } else if (index >= this.slides.length) {
-      this.currentIndex = 0;
-    } else {
-      this.currentIndex = index;
+    let targetIndex = index;
+    if (targetIndex < 0) {
+      targetIndex = this.totalSlides - 1;
+    } else if (targetIndex >= this.totalSlides) {
+      targetIndex = 0;
+    }
+
+    this.currentIndex = targetIndex;
+
+    if (this.isDesktop && this.isInfiniteReady) {
+      this.desktopPositionIndex = targetIndex + 1;
     }
 
     this.updateSlider();
@@ -136,10 +157,24 @@ class CustomSlider {
   }
 
   nextSlide() {
+    if (this.isDesktop && this.isInfiniteReady) {
+      this.desktopPositionIndex += 1;
+      this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
+      this.updateSlider();
+      this.resetAutoPlay();
+      return;
+    }
     this.goToSlide(this.currentIndex + 1);
   }
 
   prevSlide() {
+    if (this.isDesktop && this.isInfiniteReady) {
+      this.desktopPositionIndex -= 1;
+      this.currentIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
+      this.updateSlider();
+      this.resetAutoPlay();
+      return;
+    }
     this.goToSlide(this.currentIndex - 1);
   }
 
@@ -154,6 +189,7 @@ class CustomSlider {
     this.slider.addEventListener('mousemove', this.handleMouseMove.bind(this));
     this.slider.addEventListener('mouseup', this.handleMouseUp.bind(this));
     this.slider.addEventListener('mouseleave', this.handleMouseLeave.bind(this));
+    this.slider.addEventListener('transitionend', this.boundHandleTransitionEnd);
 
     // リサイズイベント
     let resizeTimer;
@@ -171,6 +207,7 @@ class CustomSlider {
             this.pager.remove();
             this.pager = null;
           }
+          this.desktopPositionIndex = this.isDesktop ? this.currentIndex + 1 : this.currentIndex;
           this.updateSlider();
         }
       }, 250);
@@ -273,6 +310,131 @@ class CustomSlider {
     if (this.pager) {
       this.pager.remove();
     }
+    this.slider.removeEventListener('transitionend', this.boundHandleTransitionEnd);
+    this.teardownDesktopStructure();
+  }
+
+  refreshSlides() {
+    this.slides = Array.from(this.slider.querySelectorAll('.slide'));
+  }
+
+  ensureDesktopStructure() {
+    if (this.isInfiniteReady || this.totalSlides < 2) {
+      return;
+    }
+
+    const firstSlide = this.originalSlides[0];
+    const lastSlide = this.originalSlides[this.totalSlides - 1];
+    if (!firstSlide || !lastSlide) {
+      return;
+    }
+
+    const firstClone = firstSlide.cloneNode(true);
+    const lastClone = lastSlide.cloneNode(true);
+    firstClone.dataset.clone = 'true';
+    lastClone.dataset.clone = 'true';
+    firstClone.setAttribute('aria-hidden', 'true');
+    lastClone.setAttribute('aria-hidden', 'true');
+
+    this.slider.appendChild(firstClone);
+    this.slider.insertBefore(lastClone, this.slider.firstElementChild);
+
+    this.isInfiniteReady = true;
+    this.refreshSlides();
+    this.desktopPositionIndex = this.currentIndex + 1;
+    this.applyDesktopTransform(true);
+  }
+
+  teardownDesktopStructure() {
+    if (!this.isInfiniteReady) {
+      return;
+    }
+
+    const clones = this.slider.querySelectorAll('.slide[data-clone="true"]');
+    clones.forEach(clone => clone.remove());
+
+    this.isInfiniteReady = false;
+    this.refreshSlides();
+    this.desktopPositionIndex = this.currentIndex;
+    this.slider.style.transition = 'none';
+    this.slider.style.transform = 'translateX(0)';
+  }
+
+  applyDesktopTransform(skipAnimation) {
+    if (!this.slides.length) {
+      return;
+    }
+
+    const slideWidth = this.slides[0].offsetWidth;
+    const sliderLeft = this.getDesktopBaseOffset();
+    const containerWidth = this.container.offsetWidth || window.innerWidth;
+    const containerCenterOffset = (containerWidth - slideWidth) / 2;
+    const baseCorrection = containerCenterOffset - sliderLeft;
+    const relativeIndex = this.isInfiniteReady ? this.desktopPositionIndex : this.currentIndex;
+    const offset = baseCorrection - relativeIndex * slideWidth;
+
+    if (skipAnimation) {
+      this.slider.style.transition = 'none';
+      this.slider.style.transform = `translateX(${offset}px)`;
+      // Reflow to ensure the browser acknowledges the new position before restoring transition
+      this.slider.getBoundingClientRect();
+      this.slider.style.transition = `transform ${this.options.speed}ms ease`;
+      return;
+    }
+
+    this.slider.style.transition = `transform ${this.options.speed}ms ease`;
+    this.slider.style.transform = `translateX(${offset}px)`;
+  }
+
+  handleTransitionEnd(event) {
+    if (event.propertyName !== 'transform') {
+      return;
+    }
+    this.handleDesktopLoopEdges();
+  }
+
+  handleDesktopLoopEdges() {
+    if (!this.isDesktop || !this.isInfiniteReady) {
+      return;
+    }
+
+    const totalTrackLength = this.totalSlides + 2;
+    if (this.desktopPositionIndex === totalTrackLength - 1) {
+      this.desktopPositionIndex = 1;
+      this.applyDesktopTransform(true);
+    } else if (this.desktopPositionIndex === 0) {
+      this.desktopPositionIndex = this.totalSlides;
+      this.applyDesktopTransform(true);
+    }
+  }
+
+  getDesktopBaseOffset() {
+    if (!this.isDesktop) {
+      return 0;
+    }
+
+    const sliderStyles = window.getComputedStyle(this.slider);
+    const leftValue = sliderStyles.getPropertyValue('left');
+
+    if (!leftValue || leftValue === 'auto') {
+      return this.slider.offsetLeft || 0;
+    }
+
+    const numericValue = parseFloat(leftValue);
+    if (Number.isNaN(numericValue)) {
+      return 0;
+    }
+
+    if (leftValue.trim().endsWith('vw')) {
+      return (numericValue / 100) * window.innerWidth;
+    }
+
+    if (leftValue.trim().endsWith('%')) {
+      const parentWidth = this.slider.offsetParent ? this.slider.offsetParent.offsetWidth : window.innerWidth;
+      return (numericValue / 100) * parentWidth;
+    }
+
+    return numericValue;
   }
 }
 
