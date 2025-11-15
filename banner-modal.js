@@ -9,20 +9,21 @@
     scrollTriggerPercentage: 0.11, // 11%
     delayAfterTrigger: 3000, // 3 seconds
 
-    // Campaign end date
-    endDate: new Date('2025-11-09T18:00:00'),
+    // Campaign period
+    startDate: new Date('2025-11-09T00:00:00'),
+    endDate: new Date('2025-11-16T23:59:59'),
 
     // Banner images (random selection)
     images: [
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1762666411/banner-images/kalabhairav_1.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1762666412/banner-images/kalabhairav_2.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1762666414/banner-images/kalabhairav_3.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1762666416/banner-images/kalabhairav_4.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1762666417/banner-images/kalabhairav_5.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193568/banner-images/weekendsale1.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193569/banner-images/weekendsale2.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193571/banner-images/weekendsale3.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193572/banner-images/weekendsale4.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193573/banner-images/weekendsale5.webp',
     ],
 
     // Banner link
-    linkUrl: 'https://sitarama.jp/?pid=109730150',
+    linkUrl: 'https://sitarama.jp/?mode=f390',
 
     // Session storage key
     sessionKey: 'bannerModalShown',
@@ -30,8 +31,16 @@
 
   // Check if modal should be displayed
   function shouldShowModal() {
+    const now = new Date();
+
     // Check campaign period
-    if (new Date() > CONFIG.endDate) {
+    if (now < CONFIG.startDate || now > CONFIG.endDate) {
+      return false;
+    }
+
+    // Check if accessed from banner link
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('from_banner') === '1') {
       return false;
     }
 
@@ -113,7 +122,8 @@
     };
 
     const bannerLink = document.createElement('a');
-    bannerLink.href = CONFIG.linkUrl;
+    const linkUrl = CONFIG.linkUrl + (CONFIG.linkUrl.includes('?') ? '&' : '?') + 'from_banner=1';
+    bannerLink.href = linkUrl;
     bannerLink.target = '_blank';
     bannerLink.rel = 'noopener noreferrer';
 
