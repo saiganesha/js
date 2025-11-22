@@ -10,16 +10,17 @@
     delayAfterTrigger: 3000, // 3 seconds
 
     // Campaign period
-    startDate: new Date('2025-11-09T00:00:00'),
-    endDate: new Date('2025-11-16T23:59:59'),
+    startDate: new Date('2025-11-22T00:00:00'),
+    endDate: new Date('2025-11-24T23:59:59'),
 
     // Banner images (random selection)
     images: [
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193568/banner-images/weekendsale1.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193569/banner-images/weekendsale2.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193571/banner-images/weekendsale3.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193572/banner-images/weekendsale4.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763193573/banner-images/weekendsale5.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786008/banner-images/holiday_sale_1.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786009/banner-images/holiday_sale_2.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786011/banner-images/holiday_sale_3.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786013/banner-images/holiday_sale_4.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786018/banner-images/holiday_sale_5.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786029/banner-images/holiday_sale_6.webp',
     ],
 
     // Banner link
