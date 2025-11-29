@@ -11,20 +11,17 @@
 
     // Campaign period
     startDate: new Date('2025-11-22T00:00:00'),
-    endDate: new Date('2025-11-24T23:59:59'),
+    endDate: new Date('2025-11-30T23:59:59'),
 
     // Banner images (random selection)
     images: [
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786008/banner-images/holiday_sale_1.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786009/banner-images/holiday_sale_2.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786011/banner-images/holiday_sale_3.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786013/banner-images/holiday_sale_4.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786018/banner-images/holiday_sale_5.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1763786029/banner-images/holiday_sale_6.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1764388925/banner-images/gitasale1.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1764388926/banner-images/gitasale2.webp',
+      'https://res.cloudinary.com/djry8fkuu/image/upload/v1764388927/banner-images/gitasale3.webp',
     ],
 
     // Banner link
-    linkUrl: 'https://sitarama.jp/?mode=f390',
+    linkUrl: 'https://sitarama.jp/?mode=f302',
 
     // Session storage key
     sessionKey: 'bannerModalShown',
@@ -42,6 +39,14 @@
     // Check if accessed from banner link
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('from_banner') === '1') {
+      return false;
+    }
+
+    // Check if current page is the link destination (compare 'mode' parameter)
+    const currentMode = urlParams.get('mode');
+    const linkUrl = new URL(CONFIG.linkUrl);
+    const linkMode = linkUrl.searchParams.get('mode');
+    if (currentMode && linkMode && currentMode === linkMode) {
       return false;
     }
 
