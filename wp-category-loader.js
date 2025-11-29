@@ -4,6 +4,7 @@
   // WordPress REST API URL
   const WP_CATEGORIES_API = 'https://sitarama.jp/apps/note/wp-json/wp/v2/categories';
   const CATEGORY_PAGE_URL = 'https://sitarama.jp/?mode=f397';
+  const RANKING_PAGE_URL = 'https://sitarama.jp/?mode=f401';
 
   // 子孫カテゴリー含む記事数を保存するMap
   let totalCountsMap = null;
@@ -84,6 +85,12 @@
         allItem.innerHTML = `<a class="l-dropdown-menu-list__link" href="${CATEGORY_PAGE_URL}">すべての記事</a>`;
         categoryList.appendChild(allItem);
 
+        // 「人気記事」リンク
+        const popularItem = document.createElement('li');
+        popularItem.className = 'l-dropdown-menu-list__item';
+        popularItem.innerHTML = `<a class="l-dropdown-menu-list__link" href="${RANKING_PAGE_URL}">人気記事</a>`;
+        categoryList.appendChild(popularItem);
+
         // 各カテゴリーを追加
         categories.forEach(category => {
           const li = document.createElement('li');
@@ -116,6 +123,16 @@
         allLink.textContent = 'すべての記事';
         allItem.appendChild(allLink);
         sideCategoryList.appendChild(allItem);
+
+        // 「人気記事」リンク
+        const popularItem = document.createElement('li');
+        popularItem.className = 'l-side-navi-list__item';
+        const popularLink = document.createElement('a');
+        popularLink.className = 'l-side-navi-list__link is-link';
+        popularLink.href = RANKING_PAGE_URL;
+        popularLink.textContent = '人気記事';
+        popularItem.appendChild(popularLink);
+        sideCategoryList.appendChild(popularItem);
 
         // 各カテゴリーを追加
         categories.forEach(category => {
