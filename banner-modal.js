@@ -43,6 +43,15 @@
         ],
         linkUrl: 'https://sitarama.jp/?mode=f404',
       },
+      {
+        name: 'ヴァイクンタ・エーカーダシー・グループ・ホーマ',
+        startDate: new Date('2025-12-13T00:00:00'),
+        endDate: new Date('2025-12-26T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765612295/banner-images/banner_vaikuntha_ekadashi.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f364',
+      },
       // Add more campaigns here as needed
       // {
       //   name: '新春キャンペーン',
