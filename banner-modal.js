@@ -9,30 +9,67 @@
     scrollTriggerPercentage: 0.11, // 11%
     delayAfterTrigger: 3000, // 3 seconds
 
-    // Campaign period
-    startDate: new Date('2025-11-22T00:00:00'),
-    endDate: new Date('2025-11-30T23:59:59'),
-
-    // Banner images (random selection)
-    images: [
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1764388925/banner-images/gitasale1.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1764388926/banner-images/gitasale2.webp',
-      'https://res.cloudinary.com/djry8fkuu/image/upload/v1764388927/banner-images/gitasale3.webp',
+    // Campaign array - each campaign has its own period, images, and link
+    campaigns: [
+      {
+        name: '歳末感謝セール',
+        startDate: new Date('2025-11-22T00:00:00'),
+        endDate: new Date('2025-12-26T23:59:59'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608070/banner-images/deity_banner_text_durga_1765608042366.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608077/banner-images/deity_banner_text_ganesha_1765607956175.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608079/banner-images/deity_banner_text_krishna_1765608026653.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608081/banner-images/deity_banner_text_lakshmi_1765607974848.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608082/banner-images/deity_banner_text_saraswati_1765607993140.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608084/banner-images/deity_banner_text_shiva_1765608011263.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f390',
+      },
+      {
+        name: 'ラクシュミー・クベーラ・マンスリー・プージャー',
+        startDate: new Date('2025-12-13T00:00:00'),
+        endDate: new Date('2025-12-16T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765611304/banner-images/banner_lakshmi_kubera.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f365',
+      },
+      {
+        name: 'ハヌマーン・ジャヤンティー・プージャー',
+        startDate: new Date('2025-12-13T00:00:00'),
+        endDate: new Date('2025-12-16T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765611846/banner-images/banner_hanuman_jayanti_v2.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f404',
+      },
+      // Add more campaigns here as needed
+      // {
+      //   name: '新春キャンペーン',
+      //   startDate: new Date('2026-01-01T00:00:00'),
+      //   endDate: new Date('2026-01-31T23:59:59'),
+      //   images: ['https://example.com/new-year-banner.webp'],
+      //   linkUrl: 'https://sitarama.jp/?mode=newyear',
+      // },
     ],
-
-    // Banner link
-    linkUrl: 'https://sitarama.jp/?mode=f302',
 
     // Session storage key
     sessionKey: 'bannerModalShown',
   };
 
+  // Get active campaigns based on current date
+  function getActiveCampaigns() {
+    const now = new Date();
+    return CONFIG.campaigns.filter(
+      (campaign) => now >= campaign.startDate && now <= campaign.endDate
+    );
+  }
+
   // Check if modal should be displayed
   function shouldShowModal() {
-    const now = new Date();
-
-    // Check campaign period
-    if (now < CONFIG.startDate || now > CONFIG.endDate) {
+    // Check if there are any active campaigns
+    const activeCampaigns = getActiveCampaigns();
+    if (activeCampaigns.length === 0) {
       return false;
     }
 
@@ -42,12 +79,17 @@
       return false;
     }
 
-    // Check if current page is the link destination (compare 'mode' parameter)
+    // Check if current page is the link destination of any active campaign
     const currentMode = urlParams.get('mode');
-    const linkUrl = new URL(CONFIG.linkUrl);
-    const linkMode = linkUrl.searchParams.get('mode');
-    if (currentMode && linkMode && currentMode === linkMode) {
-      return false;
+    if (currentMode) {
+      const isOnCampaignPage = activeCampaigns.some((campaign) => {
+        const linkUrl = new URL(campaign.linkUrl);
+        const linkMode = linkUrl.searchParams.get('mode');
+        return linkMode && currentMode === linkMode;
+      });
+      if (isOnCampaignPage) {
+        return false;
+      }
     }
 
     // Check session storage
@@ -67,8 +109,14 @@
 
   // Create modal HTML
   function createModal() {
-    // Select random image
-    const randomImage = CONFIG.images[Math.floor(Math.random() * CONFIG.images.length)];
+    // Get active campaigns and select one randomly
+    const activeCampaigns = getActiveCampaigns();
+    if (activeCampaigns.length === 0) return;
+
+    const selectedCampaign = activeCampaigns[Math.floor(Math.random() * activeCampaigns.length)];
+
+    // Select random image from the selected campaign
+    const randomImage = selectedCampaign.images[Math.floor(Math.random() * selectedCampaign.images.length)];
 
     // Create modal elements
     const modalOverlay = document.createElement('div');
@@ -128,7 +176,7 @@
     };
 
     const bannerLink = document.createElement('a');
-    const linkUrl = CONFIG.linkUrl + (CONFIG.linkUrl.includes('?') ? '&' : '?') + 'from_banner=1';
+    const linkUrl = selectedCampaign.linkUrl + (selectedCampaign.linkUrl.includes('?') ? '&' : '?') + 'from_banner=1';
     bannerLink.href = linkUrl;
     bannerLink.target = '_blank';
     bannerLink.rel = 'noopener noreferrer';
