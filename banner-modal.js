@@ -57,7 +57,7 @@
         startDate: new Date(),
         endDate: new Date('2026-01-20T18:00:00'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765923819/banner-images/banner_vasant_panchami_puja.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765924347/banner-images/banner_vasant_panchami_jp.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f409',
       },
