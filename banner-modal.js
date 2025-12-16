@@ -26,24 +26,6 @@
         linkUrl: 'https://sitarama.jp/?mode=f390',
       },
       {
-        name: 'ラクシュミー・クベーラ・マンスリー・プージャー',
-        startDate: new Date('2025-12-13T00:00:00'),
-        endDate: new Date('2025-12-16T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765611304/banner-images/banner_lakshmi_kubera.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f365',
-      },
-      {
-        name: 'ハヌマーン・ジャヤンティー・プージャー',
-        startDate: new Date('2025-12-13T00:00:00'),
-        endDate: new Date('2025-12-16T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765611846/banner-images/banner_hanuman_jayanti_v2.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f404',
-      },
-      {
         name: 'ヴァイクンタ・エーカーダシー・グループ・ホーマ',
         startDate: new Date('2025-12-13T00:00:00'),
         endDate: new Date('2025-12-26T18:00:00'),
@@ -51,6 +33,33 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/v1765612295/banner-images/banner_vaikuntha_ekadashi.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f364',
+      },
+      {
+        name: 'ニュー・イヤー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2025-12-28T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765923128/banner-images/banner_new_year_puja.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f407',
+      },
+      {
+        name: 'タイ・アマーヴァシャー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-01-15T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765923374/banner-images/banner_thai_amavasya_puja.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f408',
+      },
+      {
+        name: 'ヴァサンタ・パンチャミー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-01-20T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765923819/banner-images/banner_vasant_panchami_puja.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f409',
       },
       // Add more campaigns here as needed
       // {
