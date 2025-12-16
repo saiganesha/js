@@ -61,6 +61,15 @@
         ],
         linkUrl: 'https://sitarama.jp/?mode=f409',
       },
+      {
+        name: 'アンガーリカー・サンカタハラ・チャトゥルティー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-01-02T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765925847/banner-images/banner_angarika_chaturthi_jp.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f363',
+      },
       // Add more campaigns here as needed
       // {
       //   name: '新春キャンペーン',
