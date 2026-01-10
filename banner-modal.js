@@ -26,24 +26,6 @@
         linkUrl: 'https://sitarama.jp/?mode=f390',
       },
       {
-        name: 'ヴァイクンタ・エーカーダシー・グループ・ホーマ',
-        startDate: new Date('2025-12-13T00:00:00'),
-        endDate: new Date('2025-12-26T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765612295/banner-images/banner_vaikuntha_ekadashi.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f364',
-      },
-      {
-        name: 'ニュー・イヤー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2025-12-28T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765923128/banner-images/banner_new_year_puja.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f407',
-      },
-      {
         name: 'タイ・アマーヴァシャー・プージャー',
         startDate: new Date(),
         endDate: new Date('2026-01-15T18:00:00'),
@@ -62,13 +44,31 @@
         linkUrl: 'https://sitarama.jp/?mode=f409',
       },
       {
-        name: 'アンガーリカー・サンカタハラ・チャトゥルティー・プージャー',
+        name: 'マハーシヴァラートリ・プージャー',
         startDate: new Date(),
-        endDate: new Date('2026-01-02T18:00:00'),
+        endDate: new Date('2026-02-12T18:00:00'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765925847/banner-images/banner_angarika_chaturthi_jp.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768037027/banner-images/banner_mahashivaratri.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f363',
+        linkUrl: 'https://sitarama.jp/?mode=f314',
+      },
+      {
+        name: 'シャニ・プラドーシャム・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-02-11T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768037207/banner-images/banner_shani_pradosham.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f421',
+      },
+      {
+        name: 'ラタ・サプタミー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-01-22T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768037470/banner-images/banner_ratha_saptami.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f410',
       },
       // Add more campaigns here as needed
       // {
