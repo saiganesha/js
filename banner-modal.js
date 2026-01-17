@@ -12,27 +12,16 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: '歳末感謝セール',
-        startDate: new Date('2025-11-22T00:00:00'),
-        endDate: new Date('2025-12-26T23:59:59'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608070/banner-images/deity_banner_text_durga_1765608042366.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608077/banner-images/deity_banner_text_ganesha_1765607956175.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608079/banner-images/deity_banner_text_krishna_1765608026653.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608081/banner-images/deity_banner_text_lakshmi_1765607974848.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608082/banner-images/deity_banner_text_saraswati_1765607993140.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765608084/banner-images/deity_banner_text_shiva_1765608011263.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f390',
-      },
-      {
-        name: 'タイ・アマーヴァシャー・プージャー',
+        name: 'ヴァサンタ・パンチャミー・セール',
         startDate: new Date(),
-        endDate: new Date('2026-01-15T18:00:00'),
+        endDate: new Date('2025-01-25T23:59:59'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765923374/banner-images/banner_thai_amavasya_puja.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768644260/banner-images/2.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768644261/banner-images/3.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768644262/banner-images/4.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768644263/banner-images/5.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f408',
+        linkUrl: 'https://sitarama.jp/?mode=f311',
       },
       {
         name: 'ヴァサンタ・パンチャミー・プージャー',
