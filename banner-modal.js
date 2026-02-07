@@ -12,25 +12,16 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: 'ヴァサンタ・パンチャミー・セール',
+        name: 'マハーシヴァラートリー・スペシャルクーポン',
         startDate: new Date(),
-        endDate: new Date('2025-01-25T23:59:59'),
+        endDate: new Date('2026-02-15T23:59:59'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768644260/banner-images/2.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768644261/banner-images/3.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768644262/banner-images/4.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768644263/banner-images/5.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_webp/v1770456931/blog-writer/blog_1770456929692_1.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_webp/v1770456932/blog-writer/blog_1770456932526_2.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_webp/v1770456934/blog-writer/blog_1770456933950_3.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_webp/v1770456935/blog-writer/blog_1770456935162_4.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f311',
-      },
-      {
-        name: 'ヴァサンタ・パンチャミー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-01-20T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1765924347/banner-images/banner_vasant_panchami_jp.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f409',
+        linkUrl: 'https://sitarama.jp/?mode=f148',
       },
       {
         name: 'マハーシヴァラートリ・プージャー',
@@ -49,15 +40,6 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/v1768037207/banner-images/banner_shani_pradosham.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f421',
-      },
-      {
-        name: 'ラタ・サプタミー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-01-22T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1768037470/banner-images/banner_ratha_saptami.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f410',
       },
       // Add more campaigns here as needed
       // {
