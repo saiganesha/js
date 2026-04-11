@@ -12,17 +12,17 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: 'チャイトラ・ナヴァラートリ・クーポン',
+        name: 'アクシャヤ・トリティーヤー・クーポン',
         startDate: new Date(),
-        endDate: new Date('2026-03-29T23:59:59'),
+        endDate: new Date('2026-04-20T23:59:59'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773468021/blog-writer/blog_1773468019713_1.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773468023/blog-writer/blog_1773468022969_2.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773468024/blog-writer/blog_1773468024200_3.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773468025/blog-writer/blog_1773468025520_4.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773468027/blog-writer/blog_1773468026944_5.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899025/blog-writer/blog_1775899023908_akshaya_banner_1.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899027/blog-writer/blog_1775899026734_akshaya_banner_2.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899028/blog-writer/blog_1775899028010_akshaya_banner_3.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899030/blog-writer/blog_1775899029544_akshaya_banner_4.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899031/blog-writer/blog_1775899030914_akshaya_banner_5.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f330',
+        linkUrl: 'https://sitarama.jp/?mode=f177',
       },
       {
         name: 'アクシャヤ・トリティーヤー・プージャー',
