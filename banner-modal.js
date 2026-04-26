@@ -12,57 +12,18 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: 'アクシャヤ・トリティーヤー・クーポン',
+        name: 'チトラ・プールニマー・プージャー',
         startDate: new Date(),
-        endDate: new Date('2026-04-20T23:59:59'),
+        endDate: new Date('2026-04-28T18:00:00'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899025/blog-writer/blog_1775899023908_akshaya_banner_1.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899027/blog-writer/blog_1775899026734_akshaya_banner_2.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899028/blog-writer/blog_1775899028010_akshaya_banner_3.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899030/blog-writer/blog_1775899029544_akshaya_banner_4.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1775899031/blog-writer/blog_1775899030914_akshaya_banner_5.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197357/blog-writer/blog_1777197355223_chitra1.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197358/blog-writer/blog_1777197358393_chitra2.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197360/blog-writer/blog_1777197360106_chitra3.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197362/blog-writer/blog_1777197361687_chitra4.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197363/blog-writer/blog_1777197363304_chitra5.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197364/blog-writer/blog_1777197364354_chitra6.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f177',
-      },
-      {
-        name: 'アクシャヤ・トリティーヤー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-04-16T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773465378/blog-writer/blog_1773465376947_banner_f331_1.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773465380/blog-writer/blog_1773465379865_banner_f331_2.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773465381/blog-writer/blog_1773465381226_banner_f331_3.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773465382/blog-writer/blog_1773465382418_banner_f331_5.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773465384/blog-writer/blog_1773465383828_banner_f331_6.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773465385/blog-writer/blog_1773465385529_banner_f331_9.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f331',
-      },
-      {
-        name: 'ラーマ・ナヴァミー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-03-24T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773032553/blog-writer/blog_1773032551543_banner_f317_1.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773032554/blog-writer/blog_1773032554206_banner_f317_3.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773032556/blog-writer/blog_1773032555799_banner_f317_4.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773032557/blog-writer/blog_1773032557553_banner_f317_6.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773032559/blog-writer/blog_1773032558828_banner_f317_9.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f317',
-      },
-      {
-        name: 'チャイトラ・ナヴァラートリ・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-03-16T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773026502/blog-writer/blog_1773026501158_banner_f316_1.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773026505/blog-writer/blog_1773026504643_banner_f316_2.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773026506/blog-writer/blog_1773026506243_banner_f316_4.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773026509/blog-writer/blog_1773026508768_banner_f316_6.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1773026510/blog-writer/blog_1773026510496_banner_f316_8.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f316',
+        linkUrl: 'https://sitarama.jp/?mode=f334',
       },
       // Add more campaigns here as needed
       // {
