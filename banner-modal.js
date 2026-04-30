@@ -25,6 +25,33 @@
         ],
         linkUrl: 'https://sitarama.jp/?mode=f334',
       },
+      {
+        name: 'シャニ・ジャヤンティー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-05-13T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777456357/blog-writer/blog_1777456354950_shani-jayanti-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f335',
+      },
+      {
+        name: 'ヴァイカーシー・ヴィシャーカム・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-05-27T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777504658/blog-writer/blog_1777504656321_vaikasivisakam0530-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f531',
+      },
+      {
+        name: 'グル・トランジット・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-05-29T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777516835/blog-writer/blog_1777516833030_gurutransit20260602-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f333',
+      },
       // Add more campaigns here as needed
       // {
       //   name: '新春キャンペーン',
