@@ -12,18 +12,13 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: 'チトラ・プールニマー・プージャー',
+        name: 'ゴールデンウィーク特別セール',
         startDate: new Date(),
-        endDate: new Date('2026-04-28T18:00:00'),
+        endDate: new Date('2026-05-06T23:59:59'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197357/blog-writer/blog_1777197355223_chitra1.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197358/blog-writer/blog_1777197358393_chitra2.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197360/blog-writer/blog_1777197360106_chitra3.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197362/blog-writer/blog_1777197361687_chitra4.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197363/blog-writer/blog_1777197363304_chitra5.webp',
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777197364/blog-writer/blog_1777197364354_chitra6.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777690072/blog-writer/blog_1777690070569_gw-sale-popup.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f334',
+        linkUrl: 'https://sitarama.jp/?mode=f390',
       },
       {
         name: 'シャニ・ジャヤンティー・プージャー',
