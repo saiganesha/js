@@ -12,15 +12,6 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: 'ゴールデンウィーク特別セール',
-        startDate: new Date(),
-        endDate: new Date('2026-05-06T23:59:59'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777690072/blog-writer/blog_1777690070569_gw-sale-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f390',
-      },
-      {
         name: 'シャニ・ジャヤンティー・プージャー',
         startDate: new Date(),
         endDate: new Date('2026-05-13T18:00:00'),
@@ -46,6 +37,24 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/v1777516835/blog-writer/blog_1777516833030_gurutransit20260602-popup.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f333',
+      },
+      {
+        name: 'シャニ・プラドーシャム・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-06-24T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1778901079/blog-writer/blog_1778901077846_shani-pradosham-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f392',
+      },
+      {
+        name: 'サンカタハラ・チャトゥルティー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-06-01T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1778905693/blog-writer/blog_1778905691641_sankatahara-chaturthi-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f319',
       },
       // Add more campaigns here as needed
       // {
