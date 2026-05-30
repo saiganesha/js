@@ -12,13 +12,13 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: 'シャニ・ジャヤンティー・プージャー',
+        name: '会員ランクアップ応援セール',
         startDate: new Date(),
-        endDate: new Date('2026-05-13T18:00:00'),
+        endDate: new Date('2026-05-31T23:59:59'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777456357/blog-writer/blog_1777456354950_shani-jayanti-popup.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1780117297/blog-writer/blog_1780117296264_rankup-sale-popup.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f335',
+        linkUrl: 'https://sitarama.jp/?mode=f538',
       },
       {
         name: 'ヴァイカーシー・ヴィシャーカム・プージャー',
@@ -55,6 +55,24 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/v1778905693/blog-writer/blog_1778905691641_sankatahara-chaturthi-popup.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f319',
+      },
+      {
+        name: 'ラクシュミー・クベーラ・マンスリー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-06-11T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1780118214/blog-writer/blog_1780118212381_lakshmi-kubera-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f365',
+      },
+      {
+        name: '第217回グループ・ホーマ（ジェーシュタ・ガーヤトリー・ジャヤンティー）',
+        startDate: new Date(),
+        endDate: new Date('2026-06-21T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1780119177/blog-writer/blog_1780119175558_gayatri-jayanti-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f364',
       },
       // Add more campaigns here as needed
       // {
