@@ -12,33 +12,6 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: '会員ランクアップ応援セール',
-        startDate: new Date(),
-        endDate: new Date('2026-05-31T23:59:59'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1780117297/blog-writer/blog_1780117296264_rankup-sale-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f538',
-      },
-      {
-        name: 'ヴァイカーシー・ヴィシャーカム・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-05-27T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777504658/blog-writer/blog_1777504656321_vaikasivisakam0530-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f531',
-      },
-      {
-        name: 'グル・トランジット・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-05-29T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1777516835/blog-writer/blog_1777516833030_gurutransit20260602-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f333',
-      },
-      {
         name: 'シャニ・プラドーシャム・プージャー',
         startDate: new Date(),
         endDate: new Date('2026-06-24T18:00:00'),
@@ -48,24 +21,6 @@
         linkUrl: 'https://sitarama.jp/?mode=f392',
       },
       {
-        name: 'サンカタハラ・チャトゥルティー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-06-01T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1778905693/blog-writer/blog_1778905691641_sankatahara-chaturthi-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f319',
-      },
-      {
-        name: 'ラクシュミー・クベーラ・マンスリー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-06-11T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1780118214/blog-writer/blog_1780118212381_lakshmi-kubera-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f365',
-      },
-      {
         name: '第217回グループ・ホーマ（ジェーシュタ・ガーヤトリー・ジャヤンティー）',
         startDate: new Date(),
         endDate: new Date('2026-06-21T18:00:00'),
@@ -73,6 +28,15 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/v1780119177/blog-writer/blog_1780119175558_gayatri-jayanti-popup.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f364',
+      },
+      {
+        name: 'ガーヤトリー・ジャヤンティー記念セール',
+        startDate: new Date(),
+        endDate: new Date('2026-06-28T23:59:59'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1781957725/blog-writer/blog_1781957723248_gayatri-coupon-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f539',
       },
       // Add more campaigns here as needed
       // {
