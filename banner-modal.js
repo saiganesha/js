@@ -38,6 +38,24 @@
         ],
         linkUrl: 'https://sitarama.jp/?mode=f539',
       },
+      {
+        name: 'サンカタハラ・チャトゥルティー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-06-30T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1782081086/blog-writer/blog_1782081084827_sankatahara-chaturthi-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f319',
+      },
+      {
+        name: 'ラクシュミー・クベーラ・マンスリー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-07-10T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1782083890/blog-writer/blog_1782083888697_lakshmi-kubera-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f365',
+      },
       // Add more campaigns here as needed
       // {
       //   name: '新春キャンペーン',
