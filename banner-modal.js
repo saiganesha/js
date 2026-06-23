@@ -56,6 +56,42 @@
         ],
         linkUrl: 'https://sitarama.jp/?mode=f365',
       },
+      {
+        name: 'シルディ・サイババ・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-07-26T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1782186009/blog-writer/blog_1782186007055_shirdi-sai-baba-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f347',
+      },
+      {
+        name: 'アーディ・アマーヴァシャー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-08-09T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1782186025/blog-writer/blog_1782186023138_aadi-amavasya-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f346',
+      },
+      {
+        name: 'ナーガ・パンチャミー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-08-14T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1782186041/blog-writer/blog_1782186039117_naga-panchami-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f348',
+      },
+      {
+        name: '第218回グループ・ホーマ（ラタ・ヤートラー）',
+        startDate: new Date(),
+        endDate: new Date('2026-07-12T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1782186061/blog-writer/blog_1782186059196_ratha-yatra-group-homa-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f368',
+      },
       // Add more campaigns here as needed
       // {
       //   name: '新春キャンペーン',
