@@ -12,6 +12,15 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
+        name: 'グル・プールニマー記念セール',
+        startDate: new Date(),
+        endDate: new Date('2026-07-31T23:59:59'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/v1784957708/blog-writer/blog_1784957706965_gurupurnima-coupon-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f218',
+      },
+      {
         name: 'シャニ・プラドーシャム・プージャー',
         startDate: new Date(),
         endDate: new Date('2026-06-24T18:00:00'),
