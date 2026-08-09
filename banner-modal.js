@@ -137,6 +137,11 @@
       return false;
     }
 
+    // 商品詳細ページでは表示しない(購入検討中の全画面割り込みを避ける)
+    if (urlParams.get('pid')) {
+      return false;
+    }
+
     // Check if current page is the link destination of any active campaign
     const currentMode = urlParams.get('mode');
     if (currentMode) {
@@ -196,6 +201,9 @@
 
     const modalContent = document.createElement('div');
     modalContent.id = 'banner-modal-content';
+    modalContent.setAttribute('role', 'dialog');
+    modalContent.setAttribute('aria-modal', 'true');
+    modalContent.setAttribute('aria-label', selectedCampaign.name || 'キャンペーンのお知らせ');
     modalContent.style.cssText = `
             position: relative;
             max-width: 90%;
@@ -207,7 +215,9 @@
         `;
 
     const closeButton = document.createElement('button');
+    closeButton.type = 'button';
     closeButton.innerHTML = '×';
+    closeButton.setAttribute('aria-label', '閉じる');
     closeButton.style.cssText = `
             position: absolute;
             top: 10px;
@@ -241,6 +251,7 @@
 
     const bannerImage = document.createElement('img');
     bannerImage.src = randomImage;
+    bannerImage.alt = selectedCampaign.name || '';
     bannerImage.style.cssText = `
             display: block;
             max-width: 100%;
@@ -255,13 +266,43 @@
     modalContent.appendChild(bannerLink);
     modalOverlay.appendChild(modalContent);
 
+    // 開く前のフォーカス位置(閉じたら戻す)
+    const previouslyFocused = document.activeElement;
+
     // Close modal function
     function closeModal() {
+      document.removeEventListener('keydown', onKeydown);
       modalOverlay.style.opacity = '0';
       setTimeout(() => {
         modalOverlay.remove();
       }, 300);
       sessionStorage.setItem(CONFIG.sessionKey, 'true');
+      if (previouslyFocused && typeof previouslyFocused.focus === 'function') {
+        previouslyFocused.focus();
+      }
+    }
+
+    // Esc で閉じる + Tab をモーダル内に閉じ込める(フォーカストラップ)
+    function onKeydown(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const focusables = [closeButton, bannerLink];
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        } else if (focusables.indexOf(document.activeElement) === -1) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     }
 
     // Event listeners
@@ -271,11 +312,13 @@
         closeModal();
       }
     });
+    document.addEventListener('keydown', onKeydown);
 
     // Add to DOM and show
     document.body.appendChild(modalOverlay);
     setTimeout(() => {
       modalOverlay.style.opacity = '1';
+      closeButton.focus({preventScroll: true});
     }, 10);
   }
 
