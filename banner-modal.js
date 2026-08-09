@@ -372,13 +372,19 @@
       scrollTriggered = true;
     }
 
-    // Check conditions periodically
+    // Check conditions periodically(表示後 or 3 分経過で監視を完全に解放する)
+    function cleanupWatchers() {
+      clearInterval(checkInterval);
+      clearTimeout(maxWaitTimer);
+      window.removeEventListener('scroll', handleScroll);
+    }
     const checkInterval = setInterval(() => {
       checkAndShowModal();
       if (modalShown) {
-        clearInterval(checkInterval);
+        cleanupWatchers();
       }
     }, 1000);
+    const maxWaitTimer = setTimeout(cleanupWatchers, 180000);
   }
 
   // Initialize when DOM is ready
