@@ -1,4 +1,4 @@
-// Banner Modal Script
+// Banner Modal Script v1.0.27
 (function () {
   'use strict';
 
@@ -114,6 +114,13 @@
     // Session storage key
     sessionKey: 'bannerModalShown',
   };
+
+  // w_800 は SP のモーダル実表示幅 351px の DPR2 相当。
+  // 変換パラメータ付きの URL に重ねて付けると多重変換チェーンになるため、未変換のときだけ付与する。
+  const CLD = (u) =>
+    u.indexOf('/image/upload/') === -1 || u.indexOf('/image/upload/f_') !== -1
+      ? u
+      : u.replace('/image/upload/', '/image/upload/f_auto,q_auto,w_800/');
 
   // Get active campaigns based on current date
   function getActiveCampaigns() {
@@ -250,7 +257,7 @@
     bannerLink.rel = 'noopener noreferrer';
 
     const bannerImage = document.createElement('img');
-    bannerImage.src = randomImage;
+    bannerImage.src = CLD(randomImage);
     bannerImage.alt = selectedCampaign.name || '';
     bannerImage.style.cssText = `
             display: block;
