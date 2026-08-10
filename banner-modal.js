@@ -1,4 +1,4 @@
-// Banner Modal Script v1.0.27
+// Banner Modal Script v1.0.28
 (function () {
   'use strict';
 
@@ -323,6 +323,8 @@
 
     // Add to DOM and show
     document.body.appendChild(modalOverlay);
+    // 表示した時点でセッション抑止フラグを書く(1セッション1回。従来は閉じるまで毎ページ表示)
+    try { sessionStorage.setItem(CONFIG.sessionKey, 'true'); } catch (e) {}
     setTimeout(() => {
       modalOverlay.style.opacity = '1';
       closeButton.focus({preventScroll: true});
