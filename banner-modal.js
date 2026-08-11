@@ -1,4 +1,4 @@
-// Banner Modal Script v1.0.28
+// Banner Modal Script v1.0.29
 (function () {
   'use strict';
 
@@ -100,6 +100,15 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/v1786177979/blog-writer/blog_1786177977994_mahalaya-amavasya-popup.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f361',
+      },
+      {
+        name: 'サマーセール（全品10%OFFクーポン）',
+        startDate: new Date(),
+        endDate: new Date('2026-08-16T23:59:59'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1786418123/blog-writer/blog_1786418122220_summer-sale-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f390',
       },
       // Add more campaigns here as needed
       // {
