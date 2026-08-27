@@ -1,4 +1,4 @@
-// Banner Modal Script v1.0.29
+// Banner Modal Script v1.0.30
 (function () {
   'use strict';
 
@@ -11,33 +11,6 @@
 
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
-      {
-        name: 'アーディ・アマーヴァシャー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-08-09T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1782186025/blog-writer/blog_1782186023138_aadi-amavasya-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f346',
-      },
-      {
-        name: 'ナーガ・パンチャミー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-08-14T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1782186041/blog-writer/blog_1782186039117_naga-panchami-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f348',
-      },
-      {
-        name: '第220回グループ・ホーマ（ナーガ・パンチャミー）',
-        startDate: new Date(),
-        endDate: new Date('2026-08-13T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1786177994/blog-writer/blog_1786177992852_naga-panchami-group-homa-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f364',
-      },
       {
         name: '第221回グループ・ホーマ（ガーヤトリー・ジャヤンティー）',
         startDate: new Date(),
@@ -102,13 +75,13 @@
         linkUrl: 'https://sitarama.jp/?mode=f361',
       },
       {
-        name: 'サマーセール（全品10%OFFクーポン）',
+        name: 'クリシュナ降誕祭セール（全品10%OFFクーポン）',
         startDate: new Date(),
-        endDate: new Date('2026-08-16T23:59:59'),
+        endDate: new Date('2026-09-06T23:59:59+09:00'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1786418123/blog-writer/blog_1786418122220_summer-sale-popup.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1787799909/blog-writer/blog_1787799908802_krishna-sale-popup.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f390',
+        linkUrl: 'https://sitarama.jp/?mode=f226',
       },
       // Add more campaigns here as needed
       // {
