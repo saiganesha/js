@@ -1,4 +1,4 @@
-// Banner Modal Script v1.0.31
+// Banner Modal Script v1.0.32
 (function () {
   'use strict';
 
@@ -46,6 +46,60 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789183752/blog-writer/blog_1789183751765_ganesha-sale-popup.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f142',
+      },
+      {
+        name: 'アンガーリカー・サンカタハラ・チャトゥルティー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-09-25T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201160/blog-writer/blog_1789201158796_angarika-sankatahara-chaturthi-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f319',
+      },
+      {
+        name: 'ラクシュミー・クベーラ・マンスリー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-10-07T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201177/blog-writer/blog_1789201175417_lakshmi-kubera-monthly-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f365',
+      },
+      {
+        name: 'ナヴァラートリ・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-10-08T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201192/blog-writer/blog_1789201190894_navaratri-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f362',
+      },
+      {
+        name: 'サラスワティー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-10-16T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201208/blog-writer/blog_1789201206502_saraswati-puja-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f391',
+      },
+      {
+        name: 'ディーワーリー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-11-05T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201223/blog-writer/blog_1789201221402_diwali-puja-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f393',
+      },
+      {
+        name: '第224回グループ・ホーマ（シャラダ・ナヴァラートリ）',
+        startDate: new Date(),
+        endDate: new Date('2026-10-07T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201239/blog-writer/blog_1789201238073_group-homa-224-sharada-navaratri-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f364',
       },
       // Add more campaigns here as needed
       // {
