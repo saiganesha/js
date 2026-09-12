@@ -1,4 +1,4 @@
-// Banner Modal Script v1.0.30
+// Banner Modal Script v1.0.31
 (function () {
   'use strict';
 
@@ -11,42 +11,6 @@
 
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
-      {
-        name: '第221回グループ・ホーマ（ガーヤトリー・ジャヤンティー）',
-        startDate: new Date(),
-        endDate: new Date('2026-08-24T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1786178009/blog-writer/blog_1786178007963_gayatri-jayanti-group-homa-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f368',
-      },
-      {
-        name: 'ヴァラ・ラクシュミー・ヴラタ・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-08-25T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1786177896/blog-writer/blog_1786177894335_vara-lakshmi-vratam-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f349',
-      },
-      {
-        name: 'サンカタハラ・チャトゥルティー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-08-28T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1786177911/blog-writer/blog_1786177909571_sankatahara-chaturthi-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f319',
-      },
-      {
-        name: 'クリシュナ・ジャヤンティー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-09-01T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1786177927/blog-writer/blog_1786177925434_krishna-jayanti-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f359',
-      },
       {
         name: 'ガネーシャ・チャトゥルティー・プージャー',
         startDate: new Date(),
@@ -75,13 +39,13 @@
         linkUrl: 'https://sitarama.jp/?mode=f361',
       },
       {
-        name: 'クリシュナ降誕祭セール（全品10%OFFクーポン）',
+        name: 'ガネーシャ降誕祭セール（全品10%OFFクーポン）',
         startDate: new Date(),
-        endDate: new Date('2026-09-06T23:59:59+09:00'),
+        endDate: new Date('2026-09-23T23:59:59+09:00'),
         images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1787799909/blog-writer/blog_1787799908802_krishna-sale-popup.webp',
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789183752/blog-writer/blog_1789183751765_ganesha-sale-popup.webp',
         ],
-        linkUrl: 'https://sitarama.jp/?mode=f226',
+        linkUrl: 'https://sitarama.jp/?mode=f142',
       },
       // Add more campaigns here as needed
       // {
