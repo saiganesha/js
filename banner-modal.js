@@ -1,4 +1,4 @@
-// Banner Modal Script v1.0.32
+// Banner Modal Script v1.0.33
 (function () {
   'use strict';
 
@@ -12,24 +12,6 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
-        name: 'ガネーシャ・チャトゥルティー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-09-11T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1786177942/blog-writer/blog_1786177940773_ganesha-chaturthi-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f360',
-      },
-      {
-        name: 'マハーラクシュミー・ヴラタ・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-09-16T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/v1786177965/blog-writer/blog_1786177963826_mahalakshmi-vratam-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f369',
-      },
-      {
         name: 'マハーラヤー・アマーヴァシャー・プージャー',
         startDate: new Date(),
         endDate: new Date('2026-10-07T18:00:00'),
@@ -37,24 +19,6 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/v1786177979/blog-writer/blog_1786177977994_mahalaya-amavasya-popup.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f361',
-      },
-      {
-        name: 'ガネーシャ降誕祭セール（全品10%OFFクーポン）',
-        startDate: new Date(),
-        endDate: new Date('2026-09-23T23:59:59+09:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789183752/blog-writer/blog_1789183751765_ganesha-sale-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f142',
-      },
-      {
-        name: 'アンガーリカー・サンカタハラ・チャトゥルティー・プージャー',
-        startDate: new Date(),
-        endDate: new Date('2026-09-25T18:00:00'),
-        images: [
-          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201160/blog-writer/blog_1789201158796_angarika-sankatahara-chaturthi-popup.webp',
-        ],
-        linkUrl: 'https://sitarama.jp/?mode=f319',
       },
       {
         name: 'ラクシュミー・クベーラ・マンスリー・プージャー',
@@ -82,6 +46,15 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201208/blog-writer/blog_1789201206502_saraswati-puja-popup.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f391',
+      },
+      {
+        name: 'ナヴァラートリ祭セール（全品10%OFFクーポン・一部対象外商品あり）',
+        startDate: new Date(),
+        endDate: new Date('2026-10-18T23:59:59+09:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1791623158/blog-writer/blog_1791623158163_navaratri-sale-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f150',
       },
       {
         name: 'ディーワーリー・プージャー',
