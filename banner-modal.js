@@ -1,4 +1,4 @@
-// Banner Modal Script v1.0.33
+// Banner Modal Script v1.0.34
 (function () {
   'use strict';
 
@@ -73,6 +73,51 @@
           'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1789201239/blog-writer/blog_1789201238073_group-homa-224-sharada-navaratri-popup.webp',
         ],
         linkUrl: 'https://sitarama.jp/?mode=f364',
+      },
+      {
+        name: '第225回グループ・ホーマ（ダシャハラー）',
+        startDate: new Date(),
+        endDate: new Date('2026-10-16T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1791676346/blog-writer/blog_1791676343919_group-homa-225-dussehra-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f368',
+      },
+      {
+        name: 'サンカタハラ・チャトゥルティー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-10-26T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1791677208/blog-writer/blog_1791677207024_sankatahara-chaturthi-1029-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f319',
+      },
+      {
+        name: 'スカンダ・シャシュティー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-11-12T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1791677420/blog-writer/blog_1791677418900_skanda-sashti-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f394',
+      },
+      {
+        name: 'カールティガーイー・ディーパム・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-11-20T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1791677641/blog-writer/blog_1791677640131_karthigai-deepam-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f405',
+      },
+      {
+        name: 'カーラバイラヴァ・アシュタミー・プージャー',
+        startDate: new Date(),
+        endDate: new Date('2026-11-27T18:00:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1791677879/blog-writer/blog_1791677877643_kalabhairava-ashtami-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f402',
       },
       // Add more campaigns here as needed
       // {
