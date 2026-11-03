@@ -12,6 +12,15 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
+        name: 'ディーワーリー祭セール（全品10%OFFクーポン・一部対象外商品あり）',
+        startDate: new Date(),
+        endDate: new Date('2026-11-08T23:59:59+09:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1793673409/blog-writer/blog_1793673408831_diwali-sale-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f151',
+      },
+      {
         name: 'ディーワーリー・プージャー',
         startDate: new Date(),
         endDate: new Date('2026-11-05T18:00:00'),
