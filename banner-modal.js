@@ -12,6 +12,15 @@
     // Campaign array - each campaign has its own period, images, and link
     campaigns: [
       {
+        name: '月末感謝セール（10%OFFクーポン・一部対象外商品あり）',
+        startDate: new Date('2026-11-28T00:00:00+09:00'),
+        endDate: new Date('2026-11-29T23:59:59+09:00'),
+        images: [
+          'https://res.cloudinary.com/djry8fkuu/image/upload/f_auto,q_auto,w_800/v1795756119/blog-writer/blog_1795756118891_monthend-sale-popup.webp',
+        ],
+        linkUrl: 'https://sitarama.jp/?mode=f151',
+      },
+      {
         name: '神々の目覚めセール（10%OFFクーポン・一部対象外商品あり）',
         startDate: new Date('2026-11-21T00:00:00+09:00'),
         endDate: new Date('2026-11-23T23:59:59+09:00'),
